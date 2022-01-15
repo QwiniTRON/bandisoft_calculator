@@ -1,0 +1,38 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    // "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "commonjs": true
+  },
+  "rules": {
+    "quotes": "off",
+    "require-jsdoc": "off",
+    "linebreak-style": "off",
+    "max-len": "off",
+    "object-curly-spacing": "off",
+    "space-before-function-paren": "off",
+    "indent": ["warn", 2, {
+      "SwitchCase": 1
+    }],
+    "@typescript-eslint/indent": ["warn", 2, {
+      "SwitchCase": 1
+    }],
+    "@typescript-eslint/no-non-null-assertion": "off"
+  },
+  "extends": [
+    "eslint:recommended",
+    "google",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    // "babel",
+    // "@babel",
+    "@typescript-eslint"
+  ]
+}
