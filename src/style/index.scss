@@ -1,0 +1,13 @@
+@import "components/index.scss";
+@import "normalize.scss";
+@import "utils.scss";
+@import "vars.scss";
+
+html {
+  font-size: 14px;
+}
+
+html,
+body {
+  height: 100%;
+}

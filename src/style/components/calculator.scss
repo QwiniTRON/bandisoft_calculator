@@ -1,0 +1,104 @@
+.calculator {
+  --body-color: #46a;
+  --bgc-color: #fe8585;
+  --border-radius: calc(var(--cu) * 3);
+  font-size: clamp(16px, 1.5vw, 24px);
+  color: white;
+
+  width: min(100%, 450px);
+  padding: calc(var(--su) * 3);
+  background-color: rgba(255 255 255 / 0.3);
+  border-radius: var(--border-radius);
+  margin: 0 auto;
+
+  &__container {
+    height: 100%;
+    background: linear-gradient(20deg, #feaaaa, #fe8585);
+    padding: calc(var(--su) * 3);
+  }
+
+  &__content {
+    background: linear-gradient(-20deg, #68a, var(--body-color));
+    border-radius: var(--border-radius);
+    padding: calc(var(--su) * 4);
+    padding-top: calc(var(--su) * 6);
+
+    box-shadow: 0 2px 12px 0 #333;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    margin-bottom: calc(var(--su) * 2);
+  }
+
+  &__form {
+    display: block;
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    text-align: end;
+    display: block;
+    background-color: rgba(255 255 255 / 0);
+    border: 0;
+    font-size: 24px;
+    color: white;
+  }
+  &__input::placeholder {
+    color: rgba(255 255 255 / 0.6);
+  }
+
+  &__output {
+    font-size: clamp(24px, 2.25vw, 36px);
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    place-items: center;
+
+    margin-top: calc(var(--su) * 4);
+  }
+
+  &__button {
+    --size: min(12vw, 48px);
+
+    height: var(--size);
+    width: var(--size);
+    text-align: center;
+    line-height: var(--size);
+
+    background-color: rgba(255 255 255 / 0);
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+  }
+  &__button:hover {
+    background-color: rgba(255 255 255 / 0.2);
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    height: 100%;
+
+    &__content {
+      height: 100%;
+    }
+
+    &__body {
+      align-content: space-between;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+  }
+}
